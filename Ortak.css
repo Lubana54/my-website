@@ -1,0 +1,39 @@
+/* header başlangiç */
+.header
+{
+
+    height: 5vh;
+    font-weight: bold;
+    position: sticky;
+    z-index: 5657687;
+    top:0;
+}
+
+.navbar-header
+{
+  margin: 0.01%;
+
+}
+/* header bitis */
+
+/* main başlangiç */
+
+.main
+{
+
+    padding-top: 50px;
+}
+/* main başlangiç */
+p
+{
+  text-align: justify;
+  width: fit-content;
+}
+image
+{
+  width: fit-content;
+}
+ul li
+{
+   text-align: justify;
+}

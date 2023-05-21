@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+font-family: 'poppins',sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box ;
+scroll-behavior:smooth ;
+}
+
+header {
+background-color: pink ;
+width: 100%;
+position: fixed;
+z-index: 999;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 60px ;
+}
+
+.logo{
+text-decoration: none;
+color: palevioletred;
+text-transform: uppercase;
+font-weight: 800;
+font-size: 1.8em;
+}
+
+.navigation a{
+    color: purple;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 40px;
+}
+.navigation a:hover{
+    color: black;
+}
+section
+{ 
+padding: 0px 0px;
+
+}
+
+.main {
+    color: aliceblue;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items:center ;
+    background: url(imges/WhatsApp\ Image\ 2023-05-20\ at\ 5.07.29\ PM.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    position:absolute ;
+
+}
+
+.welcome
+{
+color: pink;
+font-size:3em;
+font-weight: 2000;
+margin-top: 10px;
+
+
+}
+
+main h3
+{
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 1px;
+    font-size: 1.4em;
+    font-weight: 200;
+}

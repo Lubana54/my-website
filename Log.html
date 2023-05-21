@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="Ortak.css" />
+    <link rel="stylesheet" href="Hakkımda.css" />
+    <!-- Latest compiled and minified CSS -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <!-- Header baslangic -->
+    <header class="header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#micon"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+          </div>
+          <div class="collapse navbar-collapse" id="micon">
+            <ul class="nav navbar-nav">
+              <li><a href="Anasayfa.html">Hakkımda </a></li>
+              <li><a href="Özgeçmiş.html">Özgeçmiş</a></li>
+              <li><a href="Şehrim.html">Şehrim</a></li>
+              <li><a href="Mirasımız.html">Mirasımız</a></li>
+              <li><a href="İlgiAlanlarım.html"> İlgili alanlarım</a></li>
+              <li><a href="İletişim.html">İletişim</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="micon">
+              <li>
+                <a href="./log.html"
+                  ><span class="glyphicon glyphicon-log-in"></span> Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Header bitiş -->
+
+    <!-- main1 baslangic -->
+
+    <section class="container">
+      <div class="jumbotron w-50 mt-5">
+        <h2>bilgilerinizi giriniz</h2>
+        <form
+          method="post"
+          name="frm1"
+          id="frm1"
+          action="Login.php"
+          onsubmit="return kontrolet()"
+        >
+          <fieldset>
+            <ul>
+              <li>
+                Email:
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="örnek:b1812100001@sakarya.edu.tr"
+                /><br />
+              </li>
+              <li>
+                Password:
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="b1812100001"
+                /><br />
+              </li>
+              <li>
+                <input type="submit" value="Login" />
+                <input type="button" onclick="resetfun()" value="Reset" />
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <script>
+      //
+      function kontrolet() {
+        var email = document.forms["frm1"]["email"].value;
+        var pass = document.forms["frm1"]["password"].value;
+        var posta =
+          /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (pass == "" || email == "") {
+          alert("alanlar boşluk içermemeli");
+          return false;
+        } else if (mailformat.test(email) == false) {
+          alert("Geçersiz Mail Adresi!");
+          return false;
+        }
+      }
+
+      function submitfun() {
+        document.getElementById("frm1").submit();
+      }
+      function resetfun() {
+        document.getElementById("frm1").reset();
+      }
+    </script>
+  </body>
+</html>
